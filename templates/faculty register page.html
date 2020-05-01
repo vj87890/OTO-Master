@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <title>BGCW Information Sharing System</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="static/lib/venobox/venobox.css" rel="stylesheet">
+  <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <!-- niro included (css) header -->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- =======================================================
+    Theme Name: BGCW Information Sharing System
+    Theme URL: https://BGCWInformationSharingSystem
+  ======================================================= -->
+
+    <style>
+  <!-- .bg {
+  /* The image used */
+  background-image: url("static/img/background/back9.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+  .bg1 {
+  /* The image used */
+  background-image: url("static/img/background/back6.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ .bg2 {
+  /* The image used */
+  background-image: url("static/img/background/back5.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ .bg3 {
+  /* The image used */
+  background-image: url("static/img/background/back2.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ .bg4 {
+  /* The image used */
+  background-image: url("static/img/background/back3.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ input:required:invalid{
+  background-image:url('static/img/wrong.png');
+  background-position:right top;
+  background-size:25px 25px;
+  background-repeat:no-repeat;
+  }
+  input:required:valid{
+  background-image:url('static/img/right.png');
+  background-position:right top;
+  background-size:25px 25px;
+  background-repeat:no-repeat;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#intro" class="scrollto"><img src="static\img\bgcw img\logo.png" style="padding:-4px;" width="100" height="350" alt="" title="">
+           &nbsp;&nbsp;&nbsp;<b style="color:#CCFB5D;font-size:2em;">BGCW Information Sharing System</b></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0"><span style="font-size:40px;">Welcome to,</span><br><span style="color:#00FFFF;font-size:35px">BGCW Information Sharing System</span></h1>
+      <p class="mb-4 pb-0" style="font-size:8">Establishment In 1968,Puducherry-605003</p>
+      <p style="font-size:12;color:#FF00FF;">click (or) scroll here to BGCW Formal Registration..!</p>
+      <a href="#log" class="about-btn scrollto" style="font-weight:900;font-size:17px;">Faculty Registration page</a>
+    </div>
+  </section>
+
+  <div id="main" class="bg3">
+
+    <!--========================
+       faculty register Page
+    ==========================-->
+    <div class="container bg3" id="log" style="background-color:#000000;">
+      <div class="row"  id="login">
+        <div class="col-lg-2 col-md-2">
+        </div>
+        <div class="col-lg-9 col-md-6">
+          <section>
+            <div class="container wow fadeIn"><br>
+              <h2 style="font-weight:800;font-size:25px;color:#00FFFF;">Welcome to BGCW Formal registration</h2>
+               <div class="jumbotron bg1">
+                  <form action="/faculup_db" method="post">
+                      <h2 style="font-size:25px;color:#F52887;font-weight:600;">Faculty update Registration Page</h2><hr>
+                      <br>
+                      {%for i in res:%}
+                      <div class="form-group">
+                          <label for="phn1" class="pull-left" style="font-weight:800;color:#810541;">Phone No :</label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="phn1" value="{{i.phone}}" name="phn1" placeholder="Phone No" pattern="[7-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('invalid Phone No')" required>
+                      </div><br>
+                      <div class="form-group">
+                          <label for="phn2" class="pull-left" style="font-weight:800;color:#810541;">Alternate Phone No :</label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="phn2" value="{{i.alt_phone}}" name="phn2" placeholder="Phone No" pattern="[7-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('invalid Phone No')" required>
+                      </div><br>
+                      <div class="form-group">
+                          <label for="email1" class="pull-left" style="font-weight:800;color:#810541;">E-Mail :</label>
+                          <input type="email" class="form-control" value="{{i.email}}" id="email1" name="email" placeholder="E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('invalid E-mail Address')" required>
+                      </div><br>
+                      <div class="form-group">
+                          <label for="pass" class="pull-left" style="font-weight:800;color:#810541;">Password :</label>
+                          <input type="password" value="{{i.password}}" class="form-control form-control-md" id="pass" name="pass" placeholder="Password" oninvalid="this.setCustomValidity('invalid Password')" required>
+                      </div><br>
+                      <div class="form-group">
+                          <label class="pull-left" style="font-weight:800;color:#810541;">Address :</label>
+                          <textarea size="3" class="form-control" name="address" placeholder="Address"></textarea>
+                      </div><br>
+                      <button type="submit" class="btn-lg btn-md btn-primary" style="font-weight:600;">REGISTER</button>
+                      &nbsp;&nbsp;<button type="reset" class="btn-lg btn-md btn-primary" style="font-weight:600;">RESET</button>
+                      &nbsp;&nbsp;<a href="/"><button class="btn-lg btn-md btn-primary" style="font-weight:600;">CANCEL</button></a>
+                    {%endfor%}
+                  </form>
+               </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-2 col-md-2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-info">
+            <img src="static\img\bgcw img\logo1.jfif" width="80" height="200" alt="TheEvenet"><h2 style="color:#00FFFF;">BGCW</h2>
+            <p style="color:#CCFB5D;text-align=justify">"Established In 1968, Bharathidasan Govt. College for Women Is Affliated To Pondicheery University the Address of the Institute Is M.G.Road, Muthialpet, Puducherry.
+            You can get More Details On bgcw.puducherry.gov.in"</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 style="color:#00FFFF;">Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="/">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="/">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4 style="color:#00FFFF;">Contact Us</h4>
+            <p>
+              Muthialpet Puducherry, Puducherry<br>
+              Pondicherry - 605003<br>
+              Puducherry , India<br>
+              <strong style="color:#00FFFF;">Phone:</strong>  0413-2212704<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0413-2213504<br>
+              <strong style="color:#00FFFF;">Email:</strong>  bgcw1968@yahoo.com<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong style="color:teal;">From BGCW</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="nirosha.html"><strong style="color:teal;">N.NIROSHA</strong> B.Sc Computer Science</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/lib/easing/easing.min.js"></script>
+  <script src="static/lib/superfish/hoverIntent.js"></script>
+  <script src="static/lib/superfish/superfish.min.js"></script>
+  <script src="static/lib/wow/wow.min.js"></script>
+  <script src="static/lib/venobox/venobox.min.js"></script>
+  <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="static/contactform/contactform.js"></script>
+
+  <!-- BGCW Template Main Javascript File -->
+  <script src="static/js/main.js"></script>
+</body>
+
+</html>

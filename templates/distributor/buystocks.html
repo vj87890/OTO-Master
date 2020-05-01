@@ -1,0 +1,119 @@
+{% extends "distributor/distributor_layout.html" %}
+{% block content %}
+<section class="content-header">
+
+      <h1>
+        Buy Stock
+
+      </h1>
+
+</section>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-cubes"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text"><b>No of Stocks</b></span>
+              <span class="info-box-number">5</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+          <div class="col-md-6">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-shopping-cart"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text"><label for="numbers">Buy Stocks</label></span>
+              <span class="info-box-number"> <select id="numbers">
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="4">8</option>
+   <option value="5">9</option>
+  <option value="6">10</option>
+  <option value="7">11</option>
+  <option value="4">12</option>
+   <option value="1">13</option>
+  <option value="2">14</option>
+  <option value="3">15</option>
+  <option value="4">16</option>
+   <option value="1">17</option>
+  <option value="2">18</option>
+  <option value="3">19</option>
+  <option value="4">20</option>
+   <option value="1">21</option>
+  <option value="2">22</option>
+  <option value="3">23</option>
+  <option value="4">24</option>
+   <option value="1">25</option>
+  <option value="2">26</option>
+  <option value="3">27</option>
+  <option value="4">28</option>
+   <option value="1">29</option>
+  <option value="2">30</option>
+  </select></span>
+              <span class="info-box-text"><button type="submit" class="btn btn-primary btn-sm pull-right">Request</button></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+
+        <!-- /.col -->
+
+        <!-- /.col -->
+      </div>
+    <!-- Main content -->
+    <section class="content">
+    <center>
+      <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title pull-left"><b>Previous Request</b></h3><br><br>
+
+              <table class="table" >
+                <thead>
+                 <tr>
+                  <th style="width:20rem">#</th>
+                  <th style="width:20rem">No.Of Stocks</th>
+                  <th style="width:20rem">Date</th>
+                  <th style="width:20rem">Response</th>
+                </tr>
+                </thead>
+              </table>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="table-wrapper-scroll-y my-custom-scrollbar" >
+<table class="table table-bordered table-striped mb-0" >
+  <tbody>
+                <tr>
+                  <td style="width:20rem">1.</td>
+                  <td style="width:20rem">5</td>
+                  <td style="width:20rem">11.03.2020</td>
+                  <td style="width:20rem"><span class="label label-warning">appraval</span></td>
+                </tr>
+
+
+  </tbody>
+              </table>
+            </div>
+
+
+
+        </div>
+      </center>
+    </section>
+    </section>
+  {% endblock content %}

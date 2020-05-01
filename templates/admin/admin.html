@@ -1,0 +1,136 @@
+<!-- Content Wrapper. Contains page content-->
+
+
+
+{% extends "admin/admin_layout.html" %}
+{% block content %}
+
+<section class="content-header">
+
+      <h1>
+        Approve Request
+
+      </h1>
+
+
+
+
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">CPU Traffic</span>
+              <span class="info-box-number">90<small>%</small></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Likes</span>
+              <span class="info-box-number">41,410</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Sales</span>
+              <span class="info-box-number">760</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">New Members</span>
+              <span class="info-box-number">2,000</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+      </div>
+    <!-- Main content -->
+    <section class="content">
+        {% if customer %}
+        <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title"><b>Request waiting for your approval</b></h3>
+
+<div style="width: 100%; height:0.5px; background-color:#d1d1d1;"></div>
+
+            </div>
+
+
+
+                    <div class="box box-widget">
+{% endif %}
+            <!-- /.box-header -->
+
+{% for i in customer %}
+                        {% if i['introducer']==session['id'] %}
+            <div class="box-body">
+              <!-- post text -->
+              <div class="row">
+                <div class="col-lg-8">
+              <span class="info-box-text"><b>{{i['username']}} - OTOC{{i['id']}}</b></span>
+              <span class="info-box-text" style="text-transform:lowercase;text-decoration:none !important">{{i['mobile']}}</span>
+                    <span class="info-box-text" style="text-transform:lowercase">{{i['email']}}</span>
+
+                </div>
+                <div class="col-lg-4">
+                    <form method="post" action="/cus_req_app">
+                        <input type="hidden" name="mobile" value="{{i['mobile']}}">
+            <button type="submit" class="btn btn-sm pull-right" style="background-color:#3c8dbc; color:white;"><b>Accept</b></button>
+                        </form>
+            </div>
+              </div>
+
+
+                <div style="width: 100%; height:1px; background-color:#d1d1d1;"></div>
+
+ </div>
+{% endif %}
+            {%endfor%}
+
+                    </div>
+
+
+
+
+
+                    </div>
+
+    <!-- /.content -->
+    </section>
+
+
+      {% endblock content %}

@@ -1,0 +1,66 @@
+{% extends "customer/customer_layout.html" %}
+{% block content %}
+
+<section class="content-header">
+
+      <h1>
+        Your customers
+
+      </h1>
+
+    </section>
+
+    <!-- Main content -->
+   <section class="content">
+<div class="row">
+    <div class="col-lg-8 my-custom-scrollbar">
+{% for i in a %}
+
+        <div class="box box-default collapsed-box" style="margin-bottom: 5px; border-top-width: 0px;">
+            <div class="box-header with-border">
+              <h3 class="box-title">{{i['username']}} - {{i['user_id']}}</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <th>Mobile</th>
+                 <td><span class="badge bg-red">{{i['mobile']}}</span></td>
+                </tr>
+                  <tr>
+
+                  <th>Email</th>
+                 <td><span class="badge bg-red">{{i['email']}}</span></td>
+                </tr>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+            <!-- /.box-body -->
+          </div>
+
+    </div>
+       {% endfor %}
+    <div class="col-lg-4" style="background-color:#ffffff; height:100px;">
+
+
+        <div class="input-group" style="margin-top:10px; border-style:solid; border-width:1.2px;  border-radius: 25px;">
+          <input type="text" name="q" class="form-control" style="background-color:transparent; border:transparent;" placeholder="Search..." >
+          <span class="input-group-btn" style="padding-left:5px;">
+                <button type="submit" name="search" id="search-btn" class="btn" style="background-color:transparent;" ><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+
+    </div>
+
+</div>
+   </section>
+  </div>
+
+
+{% endblock content %}

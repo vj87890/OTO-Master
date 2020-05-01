@@ -1,0 +1,186 @@
+{% extends "admin/admin_layout.html" %}
+{% block content %}
+<section class="content-header">
+
+      <h1>
+        Distributor Registration
+
+      </h1>
+
+</section>
+
+    <!-- Main content -->
+
+
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+
+        <!-- /.col -->
+
+        <!-- /.col -->
+
+    <!-- Main content
+    <section class="content">
+    <center>
+      <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title pull-left"><b>Previous Request</b></h3><br><br>
+
+              <table class="table" >
+                <thead>
+                 <tr>
+                  <th style="width:20rem">#</th>
+                  <th style="width:20rem">No.Of Stocks</th>
+                  <th style="width:20rem">Date</th>
+                  <th style="width:20rem">Response</th>
+                </tr>
+                </thead>
+              </table>
+
+            </div>
+            <!-- /.box-header
+            <div class="table-wrapper-scroll-y my-custom-scrollbar" >
+<table class="table table-bordered table-striped mb-0" >
+  <tbody>
+                <tr>
+                  <td style="width:20rem">1.</td>
+                  <td style="width:20rem">5</td>
+                  <td style="width:20rem">11.03.2020</td>
+                  <td style="width:20rem"><span class="label label-warning">appraval</span></td>
+                </tr>
+
+
+  </tbody>
+              </table>
+            </div>
+
+
+
+        </div>
+      </center>
+    </section>
+    </section>-->
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+
+<!--      <ol class="breadcrumb">-->
+<!--        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
+<!--        <li><a href="#">Forms</a></li>-->
+<!--        <li class="active">General Elements</li>-->
+<!--      </ol>-->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Distributor Info</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="/add_distributor" method="post">
+              <div class="box-body">
+                  <div class="form-group">
+                  <label for="exampleInputName">Name</label>
+                  <input type="text" class="form-control" id="exampleInputName" required placeholder="Enter Name" dname="dname">
+                </div>
+                  <div class="form-group">
+                  <label for="exampleInputName">DOB</label>
+                  <input type="text" class="form-control" id="DOB" required placeholder="Enter DOB" name="DOB">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" required placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputMobile1">Mobile</label>
+                  <input type="text" class="form-control" id="exampleInputMobile1" required placeholder="Enter mobile" name="mobile">
+                </div>
+                  <div class="form-group">
+                  <label for="exampleInputMobile1">Father's Name</label>
+                  <input type="text" class="form-control" id="fathersname" required placeholder="Enter Father's name" name="fathersname">
+                </div>
+                  <div class="form-group">
+                  <label for="exampleInputMobile1">Address</label>
+                  <input type="text" class="form-control" id="address" required placeholder="Enter Address" name="address">
+                </div>
+
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+
+
+                </div>
+                <!-- /.col-lg-6 -->
+              </div>
+              <!-- /.row -->
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+{% if msg  %}
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Signup Popup</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label  class="control-label">{{msg}}</label>
+
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="$('#exampleModal').modal('hide')">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif  %}
+<!-- ./wrapper -->
+<style>
+  <style>
+    .example-modal .modal {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      display: block;
+      z-index: 1;
+    }
+
+    .example-modal .modal {
+      background: transparent !important;
+    }
+  </style>
+
+
+<!-- jQuery 3 -->
+<script src="../static/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+$('#exampleModal').modal('show');</script>
+<!-- Bootstrap 3.3.7 -->
+
+
+  {% endblock content %}
